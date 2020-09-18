@@ -1,0 +1,28 @@
+168819183	kyurimkim	kkim125@seneca.ca
+workshop8 - reflect
+
+This workshop was a lot like the previous ones, so it wasn't that difficult when writing code.
+
+What I newly wrote was the abstrack base class.
+An abstract class is a class that contains or inherits a pure virtual function.
+Pure virtual function is a signature without implementation details, i.e. without definition.
+Therefore, the compiler cannot instantiate abstract classes.
+Compiler errors occur if we try to create an instance.
+By deriving and hiding other class objects using an abstract class, 
+only the functions of the abstract class are exposed in the client code.
+
+concrete classes specifically define functions declared in the abstract class.
+If the implementation of the functions is the same, it is not necessary to write them down several times.
+In this task, the definition of the bonus function was exactly the same.
+We have dynamically allocated memory to doctor types and engine types from main() to employeeee* objects,
+so even if we define bonus(), 
+bonus() function would call the derived version of the workHours().
+But I just wrote the same bonus() function twice.
+
+There was one thing I missed out on before submititin the assignment.
+virtual ~employee() {};
+I forgot to dispatch the destructor dynamically in the abstract class using virtual keywords.
+This make to ensure that any object in the hierarchy calls the destructor of its most derived class
+at destruction time, we declare the base class destructor virtual.
+All destructors in the object hierarchy are called in turn 
+because the destructor of the derived class automatically calls the destructor of the primary class.
