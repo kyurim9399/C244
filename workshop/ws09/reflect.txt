@@ -1,0 +1,41 @@
+//kyurim kim	168819183	kkim125@myseneca.ca
+workshop9- reflect
+
+As the C ++ language version is updated, concepts such as function overloading and templates are added,
+solving the chronic problems of productivity and pointers, and improving performance.
+It has been developed in the direction of reducing the overall program size. 
+If the program size can be reduced even a little, it means that the frequency of errors is reduced.
+
+Of course, when using a template, there is a small cost (overhead cost) when performing one or two additional tasks inside the program.
+However, it offers the advantage of reducing the overall program size and difficulty, rather than running costs.
+
+There are many types of templates.
+First, class Template is a class template that is used to specify the data type of a member variable or member function used inside a class.
+Of course, member functions in class templates can also be re-declared through function templates.
+In this workshop, the same class is used, but a class template is used because the number type of the box is different.
+	  NumbersBox<int> intbox(3, "Int Box"); 
+  	  NumbersBox<double> doublebox(3, "Double Box");
+
+Function Template is a concept that extends overloading of functions, 
+and is the data type of local variables or arguments used inside functions.
+Or, you can use it to specify the data type returned by the function as needed.
+Here, the code is written using a function template because it depends on the type (int or double) of the number entering the box,
+but the implementation uses the same function.
+
+NumbersBox<T>& operator*=(const NumbersBox<T>& other)
+This function is an assignment overload function to implement multiplication between classes having the same type number.
+If you use different types of classes (for example, intbox *= doublebox;), a compile error occurs.
+
+NumbersBox<T>& operator+=(T num)
+The second function is to increase the size of the array, and then receive the incoming number.
+If this function does not match the type, a compile error occurs.
+(ex) intbox += 999.234;)
+
+
+If function overloading is used, the function functions are the same, but each function must be defined according to the data type.
+However, one of the templates can be used to define all data types as a single function.
+So we can program much more economically.
+
+
+
+
