@@ -1,0 +1,19 @@
+kyurim kim 	168819183	kkim125@myseneca.ca
+
+ 1. Dynamic memory is memory that is allocated memory space at execution stage. 
+It also stores the address of each area in a pointer variable to allocate memory. 
+So we can always allocate as much memory as we want.
+However, the release of the space that is no longer used must be done manually by the user using delete.
+
+  2. An error occurred when allocating dynamic memory and receiving the string entered by the user.
+This is probably because I wrote the wrong address.
+Use pointers to allocate dynamic memory
+And I have to deallocation the memory I use.
+Finally, we need to reinitialize the pointer to nullptr.
+
+  3. The four overloaded functions gifting(char* description), gifting(double& price), gifting 
+(int& units) gifting(Gift& gift) are differentiated by their unique parameters.
+
+4. It was very difficult to directly allocate and free dynamic memory, but it was a good practice for me.
+Also how to use #ifndef/#define properly so that same header files are not compiled twice.
+
