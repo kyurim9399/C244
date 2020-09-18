@@ -1,0 +1,23 @@
+
+//kyurim kim	168819183	kkim125@myseneca.ca
+This assignment gave me a better understanding of class inheritance.
+In particular, I understood it when looking at the notes, but when I was trying to write code,
+ I was a bit confused when writing Syntex, and there were some parts I should consider.
+For example, when writing the 4-argument constructor in Car class, when declaring it, 
+it was written as we previously wrote, when I wrote a definition ": Vehicle (speed, seats)", 
+I was confused where I had to put this part after the signature.
+If I miss this part, the compiler will call the vehicle's default constructor, 
+not the vehicle's 2-argument constructor.
+
+The second part I learned was to shadow the function.
+"std :: ostream & display (std :: ostream & os) const;" used in vihicle class (base class)
+This function uses the same sigmature in the car class (derived class),
+ but is shadowed with different versions of the function.
+Scope resolution (::) was used to access the vihicle's display() in the car's display().
+The convenience of doing this is that when we use the display in the main(), 
+we can call the display in the car, so the display function of the shadowed vihicle can also be called.
+This can hide the hierarchy in the client code, and the main function may not be tied to the hierarchy.
+
+Finally, I learned about the helper operator.
+The helper function identifies the class type in the parameter and supports the class.
+And this function is only for that class, so we had to create a helper function for each class.
