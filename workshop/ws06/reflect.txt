@@ -1,0 +1,26 @@
+//kyurim kim	168819183	kkim125@myseneca.ca
+
+In this assignment, I used the copy constructor and copy assignment operator.
+At first I didn't understand the difference between the two.
+One of the differences between the two was whether the current object exists or is newly created.
+The copy constructor creates a new object by copying an existing object.
+The copy assignment operator copies an existing object to another object that already exists.
+Because of this difference, when defining the copy assignment operator,
+a delete statement was needed to deallocate the dynamic memory currently allocated to the object.
+
+Another difference is that the copy assignment operator first checks 
+whether the address of the current object and the source object are the same or not.
+If this process is not performed, copying will not occur
+because the delete statement can deallocate the dynamic memory of the source object.
+
+And the two special member functions have similar codes, 
+so I can make the code simpler by calling the copy assignment into the copy constructor.
+In this case, the nullptr must be set first for variables that use dynamic memory 
+to prevent deallocate of the dynamic memory in the copy adjustment operator function.
+
+The other thing I learned was that the source object coming into the parameter was already validated because it already existed.
+So we didn't have to validate the copy constructor (or assignment operator) when we defined it.
+
+Finally, there was a need to define a function using the << operator, but at first I didn't know why.
+However, when I looked at 'BasketTester.cpp', I found that it was for displaying data by simply entering code like 'cout << class name'.
+
