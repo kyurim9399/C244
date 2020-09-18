@@ -1,0 +1,24 @@
+//kyurim kim	168819183	kkim125@myseneca.ca
+
+1. 
+The most difficult part of this assignment was the useage of operator assignment.
+When I add another object of Engine in the engine array,
+(where I had to add it using the + = operator)
+Considering the length increase, it was difficult to write code.
+It was also really difficult to dynamically create a new array in this function,
+copy existing array ​​to add new array, and copy new arrays to existing arrays.
+Nevertheless, I was able to use it in the main to make it simpler 
+to express the addition of an object using the member operator.
+
+2. Creating a bool operator using == and < was not very difficult.
+However, I knew that I could use operators like == or < for the 'bool operator', 
+and it was also an opportunity to know how I used it by analyzing at shipmain.cpp.
+
+3. 
+When creating the calculatePower function, I declared 'size' as double in 'engine.h', 
+I missed casting it to a float in the calculation process.
+
+4. Finally, I didn't need to use destructor in lab, 
+In 'diy', we had to deallocate dynamic memory using the destructor 
+while dynamically allocating memory to the engine and ship. 
+But I almost skipped this part.
