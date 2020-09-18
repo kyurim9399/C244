@@ -1,0 +1,12 @@
+//kyurim kim	168819183	kkim125@myseneca.ca
+
+Through the assignment, I learned more about the use of constructors and destructors.
+To avoid undefined behaviour or corrupted objects we must initialize the object empty.
+If we don't initialize, an error can occur because an undefined value is stored before setting the data.
+Therefore, the constructor is necessary for complete encapsulation.
+But when I studied with theory, I couldn't understand why a destructor is  necessary.
+In this assignment, there was a situation where the defined char array m_name in the class had to be changed to setting m_name to pointer and allocate dynamic memory.
+When I defined the destructor, I had to write the code to deallocate dynamic memory rather than leave it empty.
+In addition, the destructor then deletes the object based on the construction order, not the order of use.
+Also, when you try to access the data member of another object in a member function,
+I learned that other.data can be accessed this way.
