@@ -1,0 +1,23 @@
+kyurim kim	168819183	kkim125@myseneca.ca
+
+1. We must consider that the information coming from the client code is always valid.
+If the input data is not valid, we can ignore the data and save the default value that identifies the state of the object as empty.
+It is much more appropriate and meaningful to set a default than to specify no value or assign an invalid value.
+Knowing that it's an empty state is useful because we know we can enter information into the object.
+For example, suppose we have a data member named age in a class called student.
+If the data entered is non-ageable (zero or negative) we can set the default value to zero.
+
+2.The struct is basically a public data member.
+In contrast, classes are private to data members by default.
+Clients can only access public data members, not private data members.
+To solve this, we can indirectly access the data member using the public member function of object.
+
+
+3. If the programmer has coded using data that he wants to keep the value from changing,
+ this is to prevent the client from accidentally changing the value of the data.
+If we publish all the data, the client can manipulate or corrupt the data in an inappropriate way.
+Therefore, clients should only be able to access published members.
+
+4. I learned how to access a plivated data member using the member functions exposed in the class.
+I learned how to write code to enter the appropriate data.
+I learned how to output the decimal point to the desired place.
