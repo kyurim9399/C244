@@ -1,0 +1,12 @@
+Student Number : 168819183
+Name : kyurim kim
+section : NDD
+email : kkim125@myseneca.ca
+
+
+In this workshop, I learned how to split modules properly.
+Remembering what I learned at ipc, I did this workshop.
+I declared a function prototype in the header file.
+In the implementation file, I declared the function definition 
+and separated the code by storing the contents in the wordstat file as shown in pdf.
+I also learned better how namespaces are used.
